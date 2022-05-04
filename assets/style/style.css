@@ -1,0 +1,371 @@
+:root {
+  --text-color: #667085;
+  --primary-color: #8E2424;
+  --title-color: #101828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.links {
+  margin-right: 150px;
+}
+
+.links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.links a:hover {
+  color: var(--primary-color);
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 500;
+  background: none;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+button#signUp {
+  background-color: var(--primary-color);
+  color: #FFF;
+}
+
+.sideMenu {
+  display: none;
+  visibility: hidden;
+}
+
+.menu.active {
+  right: 0;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.sideMenu img {
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.intro {
+  padding: 6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.intro span {
+  color: var(--primary-color);
+}
+
+.intro h1 {
+  font-size: 2rem;
+}
+
+.intro p {
+  color: var(--text-color);
+  max-width: 50%;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  padding: 0 8rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric span.title {
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.metric span {
+  color: var(--text-color);
+  line-height: 140%;
+  font-size: 90%;
+}
+
+.metric .metric-title {
+  font-weight: 500;
+  color: #101828;
+}
+
+.talents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+  padding-bottom: 64px;
+  gap: 1rem;
+
+}
+
+.talents span {
+  color: var(--primary-color);
+  background: rgba(142, 36, 36, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.talents p {
+  color: var(--text-color);
+}
+
+.talents img {
+  margin-top: 2rem;
+  width: 80%;
+}
+
+.open-work {
+  padding-top: 4rem;
+  padding: 0;
+}
+
+.open-work span.main {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.work {
+  border: 1px solid #EAECF0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.work span.work-title {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.work .informations {
+  margin-top: 1rem;
+  font-size: 90%;
+  color: var(--text-color);
+  display: flex;
+  gap: 2rem;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 8rem auto;
+  background-color: rgba(195, 25, 25, 0.05);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+}
+
+.comment span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.comment img {
+  width: 48px;
+}
+
+.comment h2 {
+  color: var(--title-color);
+  font-weight: 500;
+  text-align: center;
+  max-width: 70%;
+  margin: 2rem 0;
+}
+
+.comment .name {
+  color: #101828;
+  margin-bottom: 4px;
+}
+
+.comment span.work-profile {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F9FAFB;
+  padding: 6rem 0;
+  gap: 1.5rem;
+}
+
+footer h2 {
+  color: var(--title-color);
+}
+
+footer span {
+  color: var(--text-color);
+}
+
+footer form {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer input {
+  outline: none;
+  border: 1px solid #D0D5DD;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  width: 280px;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 920px) {
+  .metrics {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .metrics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metric {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .metric span {
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .intro p {
+    max-width: 70%;
+  }
+
+  .work {
+    max-width: 70%;
+  }
+
+  .open-work span.main {
+    max-width: 70%;
+  }
+
+  .comment h2 {
+    max-width: 100%;
+    font-size: 120%;
+  }
+
+  .comment span {
+    text-align: center;
+  }
+
+  .sideMenu {
+    display: initial;
+    visibility: visible;
+  }
+
+  .links {
+    margin: 2rem 0;
+  }
+
+  .links a {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    height: 100vh;
+    background: #F9FAFB;
+    width: 15rem;
+    padding: 2rem;
+    transition: all 2s;
+  }
+
+  .menu .links, .menu .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header h1 {
+    text-align: center;
+  }
+
+  header .logo {
+    margin-right: 60px;
+  }
+
+  .talents h2, p {
+    text-align: center;
+  }
+
+  .talents p {
+    margin-inline: 20px;
+  }
+
+  footer {
+    text-align: center;
+    margin-inline: 20px;
+  }
+
+  form {
+    width: 80%;
+  }
+}
